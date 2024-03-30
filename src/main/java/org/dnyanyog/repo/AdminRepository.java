@@ -1,8 +1,6 @@
 package org.dnyanyog.repo;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.dnyanyog.entity.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
@@ -12,8 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Long> {
 
-	List<Admin> findByAdminIdAndPassword(String adminId, String password);
-	
-	
-	
+  List<Admin> findByAdminIdAndPassword(String adminId, String password);
 }

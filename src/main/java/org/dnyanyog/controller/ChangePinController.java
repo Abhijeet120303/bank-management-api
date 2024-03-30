@@ -1,6 +1,5 @@
 package org.dnyanyog.controller;
 
-
 import org.dnyanyog.dto.request.ChangePinRequest;
 import org.dnyanyog.dto.response.ChangePinResponse;
 import org.dnyanyog.service.ChangePinService;
@@ -12,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ChangePinController {
 
-	@Autowired
-	ChangePinService service;
-	
-	@PutMapping(path="/auth/user/change/pin")
-	public ChangePinResponse changePin(@RequestBody ChangePinRequest changePin) {
-		
-		return service.changePin(changePin);
-	}
+  @Autowired ChangePinService service;
+
+  @PutMapping(path = "/auth/user/change/pin")
+  public ChangePinResponse changePin(@RequestBody ChangePinRequest changePin) {
+
+    return service.changePin(changePin);
+  }
 }

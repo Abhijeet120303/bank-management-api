@@ -1,131 +1,114 @@
 package org.dnyanyog.entity;
 
-import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.springframework.stereotype.Component;
 
 @Entity
 @Component
 @Table
 public class TotalAccounts {
-	
-	@GeneratedValue
-	@Id
-	@Column
-	private Long serialNo;
-	
-	@Column
-	private String firstName;
 
-	@Column
-	private String mobileNumber;
+  @GeneratedValue @Id @Column private Long serialNo;
 
-	@Column
-	private String emailId;
-	
-	@Column
-	private String atmPin;
+  @Column private String firstName;
 
-	@Column
-	private long customerId;
+  @Column private String mobileNumber;
 
-	@Column
-	private String cardNo;
+  @Column private String emailId;
 
-	@Column
-	private String accountType;
+  @Column private String atmPin;
 
-	@Column
-	private double balance;
+  @Column private long customerId;
 
-	@Column
-	private String accountStatus;
-	
+  @Column private String cardNo;
 
-	public Long getSerialNo() {
-		return serialNo;
-	}
+  @Column private String accountType;
 
-	public void setSerialNo(Long serialNo) {
-		this.serialNo = serialNo;
-	}
+  @Column private double balance;
 
-	public String getFirstName() {
-		return firstName;
-	}
+  @Column private String accountStatus;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+  public Long getSerialNo() {
+    return serialNo;
+  }
 
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
+  public void setSerialNo(Long serialNo) {
+    this.serialNo = serialNo;
+  }
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
-	}
+  public String getFirstName() {
+    return firstName;
+  }
 
-	public String getEmailId() {
-		return emailId;
-	}
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
+  public String getMobileNumber() {
+    return mobileNumber;
+  }
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  public void setMobileNumber(String mobileNumber) {
+    this.mobileNumber = mobileNumber;
+  }
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  public String getEmailId() {
+    return emailId;
+  }
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  public void setEmailId(String emailId) {
+    this.emailId = emailId;
+  }
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  public String getAtmPin() {
+    return atmPin;
+  }
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public String getAccountType() {
-		return accountType;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public double getBalance() {
-		return balance;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public void setBalance(double d) {
-		this.balance = d;
-	}
+  public String getAccountType() {
+    return accountType;
+  }
 
-	public String getAccountStatus() {
-		return accountStatus;
-	}
+  public void setAccountType(String accountType) {
+    this.accountType = accountType;
+  }
 
-	public void setAccountStatus(String accountStatus) {
-		this.accountStatus = accountStatus;
-	}
-	
-	
+  public double getBalance() {
+    return balance;
+  }
 
+  public void setBalance(double d) {
+    this.balance = d;
+  }
+
+  public String getAccountStatus() {
+    return accountStatus;
+  }
+
+  public void setAccountStatus(String accountStatus) {
+    this.accountStatus = accountStatus;
+  }
 }

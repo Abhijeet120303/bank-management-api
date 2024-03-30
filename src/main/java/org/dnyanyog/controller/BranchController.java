@@ -1,7 +1,6 @@
 package org.dnyanyog.controller;
 
 import java.util.List;
-
 import org.dnyanyog.dto.request.BranchAddRequest;
 import org.dnyanyog.dto.response.BranchAddResponse;
 import org.dnyanyog.service.BranchService;
@@ -13,17 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BranchController {
-	
-	@Autowired
-	BranchService service;
-	
-	@PostMapping(path = "/api/admin/add/branch")
-	public BranchAddResponse addBranch(@RequestBody BranchAddRequest branchAddRequest) {
-		
-		return service.addBranch(branchAddRequest);
-	}
-	@GetMapping("/api/admin/get/branchNames")
-    public List<String> getAllBranchNames() {
-        return service.getAllBranchNames();
-    }
+
+  @Autowired BranchService service;
+
+  @PostMapping(path = "/api/admin/add/branch")
+  public BranchAddResponse addBranch(@RequestBody BranchAddRequest branchAddRequest) {
+
+    return service.addBranch(branchAddRequest);
+  }
+
+  @GetMapping("/api/admin/get/branchNames")
+  public List<String> getAllBranchNames() {
+    return service.getAllBranchNames();
+  }
 }

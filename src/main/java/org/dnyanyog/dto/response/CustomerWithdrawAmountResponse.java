@@ -3,26 +3,25 @@ package org.dnyanyog.dto.response;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CustomerWithdrawAmountResponse {  
-	
-    private String status;
-	
-	private String response;
+public class CustomerWithdrawAmountResponse {
 
-	public String getStatus() {
-		return status;
-	}
+  private String status;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private String response;
 
-	public String getResponse() {
-		return response;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public void setResponse(String response) {
-		this.response = response;
-	}
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
+  public String getResponse() {
+    return response;
+  }
+
+  public void setResponse(String response) {
+    this.response = response;
+  }
 }

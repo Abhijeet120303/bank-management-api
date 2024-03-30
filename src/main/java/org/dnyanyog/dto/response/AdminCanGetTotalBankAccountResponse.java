@@ -4,122 +4,114 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AdminCanGetTotalBankAccountResponse {
-	
-	private String status;
-	
-	private String message;
-	
-	
-	
-	
-	public String getStatus() {
-		return status;
-	}
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private String status;
 
-	public String getMessage() {
-		return message;
-	}
+  private String message;
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	private String firstName;
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	private String mobileNumber;
+  public String getMessage() {
+    return message;
+  }
 
-	private String emailId;
-	
-	private String atmPin;
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-	private long customerId;
+  private String firstName;
 
-	private String cardNo;
+  private String mobileNumber;
 
-	private String accountType;
+  private String emailId;
 
-	private double balance;
- 
-	private String accountStatus;
+  private String atmPin;
 
-	public String getFirstName() {
-		return firstName;
-	}
+  private long customerId;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+  private String cardNo;
 
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
+  private String accountType;
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
-	}
+  private double balance;
 
-	public String getEmailId() {
-		return emailId;
-	}
+  private String accountStatus;
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
+  public String getFirstName() {
+    return firstName;
+  }
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  public String getMobileNumber() {
+    return mobileNumber;
+  }
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  public void setMobileNumber(String mobileNumber) {
+    this.mobileNumber = mobileNumber;
+  }
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  public String getEmailId() {
+    return emailId;
+  }
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  public void setEmailId(String emailId) {
+    this.emailId = emailId;
+  }
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  public String getAtmPin() {
+    return atmPin;
+  }
 
-	public String getAccountType() {
-		return accountType;
-	}
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
 
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public double getBalance() {
-		return balance;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public void setBalance(double d) {
-		this.balance = d;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public String getAccountStatus() {
-		return accountStatus;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public void setAccountStatus(String accountStatus) {
-		this.accountStatus = accountStatus;
-	}
-	
-	
+  public String getAccountType() {
+    return accountType;
+  }
 
-	
+  public void setAccountType(String accountType) {
+    this.accountType = accountType;
+  }
 
+  public double getBalance() {
+    return balance;
+  }
+
+  public void setBalance(double d) {
+    this.balance = d;
+  }
+
+  public String getAccountStatus() {
+    return accountStatus;
+  }
+
+  public void setAccountStatus(String accountStatus) {
+    this.accountStatus = accountStatus;
+  }
 }

@@ -1,48 +1,38 @@
 package org.dnyanyog.dto.request;
 
 public class CustomerDepositAmountRequest {
-	
-//	private double amount;
-//	
-//	private String pin;
-	
-	
-	private int balance;
-	
-	private String atmPin;
-	
-	private String cardNo;
-	
-	
 
+  //	private double amount;
+  //
+  //	private String pin;
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  private int balance;
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  private String atmPin;
 
-	public int getBalance() {
-		return balance;
-	}
+  private String cardNo;
 
-	public void setBalance(int balance) {
-		this.balance = balance;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  public int getBalance() {
+    return balance;
+  }
 
+  public void setBalance(int balance) {
+    this.balance = balance;
+  }
 
+  public String getAtmPin() {
+    return atmPin;
+  }
 
-	
-	
-
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
 }

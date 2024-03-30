@@ -4,17 +4,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomerCanGetTransactionsRequest {
-	
-	private long customerId;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  private long customerId;
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
-	
-	
+  public long getCustomerId() {
+    return customerId;
+  }
 
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 }

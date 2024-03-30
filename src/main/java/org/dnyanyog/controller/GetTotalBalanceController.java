@@ -12,28 +12,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GetTotalBalanceController {
 
-    @Autowired
-    private GetToatalBalnaceService getToatalBalnaceService;
+  @Autowired private GetToatalBalnaceService getToatalBalnaceService;
 
-    @GetMapping(path = "/api/v1/customer/get/balance/{customerId}")
-    public ResponseEntity<GetTotalBalanceResponse> getTotalBalance(@PathVariable(name = "customerId") Long customerId) {
-        try {
-            if (customerId == null || customerId < 0) {
-                return ResponseEntity.badRequest().build(); 
-            }
+  @GetMapping(path = "/api/v1/customer/get/balance/{customerId}")
+  public ResponseEntity<GetTotalBalanceResponse> getTotalBalance(
+      @PathVariable(name = "customerId") Long customerId) {
+    try {
+      if (customerId == null || customerId < 0) {
+        return ResponseEntity.badRequest().build();
+      }
 
-            GetTotalBalanceResponse response = getToatalBalnaceService.getTotalBalance(customerId);
+      GetTotalBalanceResponse response = getToatalBalnaceService.getTotalBalance(customerId);
 
-            if ("Success".equals(response.getStatus())) {
-                return ResponseEntity.ok(response);
-            } else {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response); 
-            }
-        } catch (Exception e) {
-            // Log the exception for debugging purposes
-            e.printStackTrace();
+      if ("Success".equals(response.getStatus())) {
+        return ResponseEntity.ok(response);
+      } else {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+      }
+    } catch (Exception e) {
+      // Log the exception for debugging purposes
+      e.printStackTrace();
 
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build(); 
-        }
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
+  }
 }

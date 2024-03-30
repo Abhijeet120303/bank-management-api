@@ -1,57 +1,50 @@
 package org.dnyanyog.service;
 
 import java.util.List;
-
 import org.dnyanyog.dto.request.BranchAddRequest;
 import org.dnyanyog.dto.response.BranchAddResponse;
 import org.dnyanyog.entity.Branch;
-import org.dnyanyog.entity.CustomerResgistration;
 import org.dnyanyog.repo.BranchServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BranchService {
-	
 
-	@Autowired
-	BranchServiceRepository repo;
-	
-	@Autowired
-	List<String> branchNames;
+  @Autowired BranchServiceRepository repo;
 
-	public BranchAddResponse addBranch(BranchAddRequest branchAddRequest) {
-		
-		Branch branch = new Branch();
+  @Autowired List<String> branchNames;
 
-		branch.setBranchName(branchAddRequest.getBranchName());
-		branch.setBranchCity(branchAddRequest.getBranchCity());
-		branch.setBranchState(branchAddRequest.getBranchState());
+  public BranchAddResponse addBranch(BranchAddRequest branchAddRequest) {
 
-		branch = repo.save(branch);
-		
-		BranchAddResponse branchAddResponse= new BranchAddResponse();
-		
-		branchAddResponse.setStatus("Success");
-		branchAddResponse.setMessage("Branch Add Successfully");
-		branchAddResponse.setSerialNo(branch.getSerialNo());
-		
-		branchAddResponse.setBrachName(branch.getBranchName());
-		branchAddResponse.setBranchCity(branch.getBranchCity());
-		branchAddResponse.setBranchState(branch.getBranchState());
+    Branch branch = new Branch();
 
-		return branchAddResponse;
+    branch.setBranchName(branchAddRequest.getBranchName());
+    branch.setBranchCity(branchAddRequest.getBranchCity());
+    branch.setBranchState(branchAddRequest.getBranchState());
 
-	}
-	public List<String> getAllBranchNames() {
-		List<Branch> branch = repo.findAll();
+    branch = repo.save(branch);
 
+    BranchAddResponse branchAddResponse = new BranchAddResponse();
 
-		for (Branch b : branch) {
-			branchNames.add(b.getBranchName());
-		}
+    branchAddResponse.setStatus("Success");
+    branchAddResponse.setMessage("Branch Add Successfully");
+    branchAddResponse.setSerialNo(branch.getSerialNo());
 
-		return branchNames;
-	}
+    branchAddResponse.setBrachName(branch.getBranchName());
+    branchAddResponse.setBranchCity(branch.getBranchCity());
+    branchAddResponse.setBranchState(branch.getBranchState());
 
+    return branchAddResponse;
+  }
+
+  public List<String> getAllBranchNames() {
+    List<Branch> branch = repo.findAll();
+
+    for (Branch b : branch) {
+      branchNames.add(b.getBranchName());
+    }
+
+    return branchNames;
+  }
 }

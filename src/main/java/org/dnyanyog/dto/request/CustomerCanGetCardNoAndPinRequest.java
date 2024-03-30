@@ -4,54 +4,46 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomerCanGetCardNoAndPinRequest {
-	
-	private String customerId;
-	
-	private String EmailId;
-	
-	private String cardNo;
-	
-	private String atmPin;
-	
-	private String emailId;
 
-	
-	
-	
-	
+  private String customerId;
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  private String EmailId;
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  private String cardNo;
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  private String atmPin;
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  private String emailId;
 
-	public String getCustomerId() {
-		return customerId;
-	}
+  public String getAtmPin() {
+    return atmPin;
+  }
 
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
 
-	public String getEmailId() {
-		return EmailId;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public void setEmailId(String emailId) {
-		EmailId = emailId;
-	}
-	
-	
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
+  public String getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(String customerId) {
+    this.customerId = customerId;
+  }
+
+  public String getEmailId() {
+    return EmailId;
+  }
+
+  public void setEmailId(String emailId) {
+    EmailId = emailId;
+  }
 }

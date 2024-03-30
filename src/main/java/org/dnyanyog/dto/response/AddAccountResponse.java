@@ -5,36 +5,34 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AddAccountResponse {
-	
-	private String status;
-	
-	private String message;
-	
-	@Autowired
-	private AddAccountData data;
 
-	public String getStatus() {
-		return status;
-	}
+  private String status;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private String message;
 
-	public String getMessage() {
-		return message;
-	}
+  @Autowired private AddAccountData data;
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public AddAccountData getData() {
-		return data;
-	}
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	public void setData(AddAccountData data) {
-		this.data = data;
-	}
+  public String getMessage() {
+    return message;
+  }
 
+  public void setMessage(String message) {
+    this.message = message;
+  }
+
+  public AddAccountData getData() {
+    return data;
+  }
+
+  public void setData(AddAccountData data) {
+    this.data = data;
+  }
 }

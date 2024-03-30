@@ -4,27 +4,24 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AdminCanGetTotalTransactionResponse {
-	
-	private String status;
-	
-	private String message;
 
-	public String getStatus() {
-		return status;
-	}
+  private String status;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private String message;
 
-	public String getMessage() {
-		return message;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
-	
-	
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
 }

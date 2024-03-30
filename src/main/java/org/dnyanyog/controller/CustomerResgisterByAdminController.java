@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CustomerResgisterByAdminController {
-	
-	@Autowired
-	CustomerResgistrationByAdminService service;
-	
-	@PostMapping(path = "/api/admin/add/customerbyadmin")
-	public CustomerResgisterByAdminResponse addCustomer(@RequestBody CustomerResgisterByAdminRequest request) {
-		
-		return service.resgister(request);
-	}	
+
+  @Autowired CustomerResgistrationByAdminService service;
+
+  @PostMapping(path = "/api/admin/add/customerbyadmin")
+  public CustomerResgisterByAdminResponse addCustomer(
+      @RequestBody CustomerResgisterByAdminRequest request) {
+
+    return service.resgister(request);
+  }
 }

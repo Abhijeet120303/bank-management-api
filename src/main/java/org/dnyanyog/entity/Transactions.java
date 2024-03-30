@@ -1,91 +1,75 @@
 package org.dnyanyog.entity;
 
-import java.time.LocalDateTime;
-
-import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.time.LocalDateTime;
+import org.springframework.stereotype.Component;
 
 @Entity
 @Component
 @Table
 public class Transactions {
-	
-	@GeneratedValue
-	@Id
-	@Column
-	private long transactionId;
-	
-	@Column
-	private long customerId;
 
-	@Column
-	private String cardNo;
+  @GeneratedValue @Id @Column private long transactionId;
 
-	@Column
-	private int balance;
+  @Column private long customerId;
 
-	@Column
-	private String transactionType;
+  @Column private String cardNo;
 
-	@Column
-	private LocalDateTime transactionDate;
+  @Column private int balance;
 
-	public long getTransactionId() {
-		return transactionId;
-	}
+  @Column private String transactionType;
 
-	public void setTransactionId(long transactionId) {
-		this.transactionId = transactionId;
-	}
+  @Column private LocalDateTime transactionDate;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  public long getTransactionId() {
+    return transactionId;
+  }
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  public void setTransactionId(long transactionId) {
+    this.transactionId = transactionId;
+  }
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public int getBalance() {
-		return balance;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public void setBalance(int balance) {
-		this.balance = balance;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public String getTransactionType() {
-		return transactionType;
-	}
+  public int getBalance() {
+    return balance;
+  }
 
-	public void setTransactionType(String transactionType) {
-		this.transactionType = transactionType;
-	}
+  public void setBalance(int balance) {
+    this.balance = balance;
+  }
 
-	public LocalDateTime getTransactionDate() {
-		return transactionDate;
-	}
+  public String getTransactionType() {
+    return transactionType;
+  }
 
-	public void setTransactionDate(LocalDateTime transactionDate) {
-		this.transactionDate = transactionDate;
-	}
+  public void setTransactionType(String transactionType) {
+    this.transactionType = transactionType;
+  }
 
-	
+  public LocalDateTime getTransactionDate() {
+    return transactionDate;
+  }
 
-
-	
+  public void setTransactionDate(LocalDateTime transactionDate) {
+    this.transactionDate = transactionDate;
+  }
 }

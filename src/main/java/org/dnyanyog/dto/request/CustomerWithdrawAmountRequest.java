@@ -4,42 +4,34 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomerWithdrawAmountRequest {
-	
-    private int balance;
-	
-	private String atmPin;
-	
-	private String cardNo;
-	
-	
 
+  private int balance;
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  private String atmPin;
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  private String cardNo;
 
-	public int getBalance() {
-		return balance;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public void setBalance(int balance) {
-		this.balance = balance;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  public int getBalance() {
+    return balance;
+  }
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  public void setBalance(int balance) {
+    this.balance = balance;
+  }
 
+  public String getAtmPin() {
+    return atmPin;
+  }
 
-
-
-
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
 }

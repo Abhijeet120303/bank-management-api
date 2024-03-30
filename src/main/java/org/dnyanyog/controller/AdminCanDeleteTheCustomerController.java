@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AdminCanDeleteTheCustomerController {
 
-	@Autowired
-	AdminCanDeleteTheCustomersService adminCanDeleteTheCustomersService;
+  @Autowired AdminCanDeleteTheCustomersService adminCanDeleteTheCustomersService;
 
-	@DeleteMapping(path = "/api/v1/admin/delete/customer/{customerId}", consumes = { "application/json",
-			"application/xml" }, produces = { "application/json", "application/xml" })
-	public AdminCanDeleteTheCustomersResponse deleteCustomer(@PathVariable Long customerId) {
-		return adminCanDeleteTheCustomersService.deleteCustomer(customerId);
-
-	}
+  @DeleteMapping(
+      path = "/api/v1/admin/delete/customer/{customerId}",
+      consumes = {"application/json", "application/xml"},
+      produces = {"application/json", "application/xml"})
+  public AdminCanDeleteTheCustomersResponse deleteCustomer(@PathVariable Long customerId) {
+    return adminCanDeleteTheCustomersService.deleteCustomer(customerId);
+  }
 }

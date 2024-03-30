@@ -1,154 +1,148 @@
 package org.dnyanyog.dto.response;
 
 import java.time.LocalDate;
-
 import org.springframework.stereotype.Component;
 
 @Component
 public class AdminCanSearchTheCustomersResponse {
-	
-	private String status;
-	
-	private String message;
-	
-	private long customerId;
-	
-	private String firstName;
-	
-	private String lastName;
-	
-	private LocalDate dateOfBirth;
-	
-	private String mobileNumber;
-	
-	private String emailId;
 
-	private String gender;
+  private String status;
 
-	private String branch;
-	
-	private String password;
+  private String message;
 
-	private String permantAddress;
+  private long customerId;
 
-	private String presentAddress;
-	
-	private String accountStatus;
+  private String firstName;
 
-	public String getAccountStatus() {
-		return accountStatus;
-	}
+  private String lastName;
 
-	public void setAccountStatus(String accountStatus) {
-		this.accountStatus = accountStatus;
-	}
+  private LocalDate dateOfBirth;
 
-	public String getStatus() {
-		return status;
-	}
+  private String mobileNumber;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private String emailId;
 
-	public String getMessage() {
-		return message;
-	}
+  private String gender;
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+  private String branch;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  private String password;
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  private String permantAddress;
 
-	public String getFirstName() {
-		return firstName;
-	}
+  private String presentAddress;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+  private String accountStatus;
 
-	public String getLastName() {
-		return lastName;
-	}
+  public String getAccountStatus() {
+    return accountStatus;
+  }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+  public void setAccountStatus(String accountStatus) {
+    this.accountStatus = accountStatus;
+  }
 
-	public LocalDate getDateOfBirth() {
-		return dateOfBirth;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
+  public String getMessage() {
+    return message;
+  }
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
-	}
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-	public String getEmailId() {
-		return emailId;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public String getGender() {
-		return gender;
-	}
+  public String getFirstName() {
+    return firstName;
+  }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-	public String getBranch() {
-		return branch;
-	}
+  public String getLastName() {
+    return lastName;
+  }
 
-	public void setBranch(String branch) {
-		this.branch = branch;
-	}
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
 
-	public String getPassword() {
-		return password;
-	}
+  public LocalDate getDateOfBirth() {
+    return dateOfBirth;
+  }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+  public void setDateOfBirth(LocalDate dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
 
-	public String getPermantAddress() {
-		return permantAddress;
-	}
+  public String getMobileNumber() {
+    return mobileNumber;
+  }
 
-	public void setPermantAddress(String permantAddress) {
-		this.permantAddress = permantAddress;
-	}
+  public void setMobileNumber(String mobileNumber) {
+    this.mobileNumber = mobileNumber;
+  }
 
-	public String getPresentAddress() {
-		return presentAddress;
-	}
+  public String getEmailId() {
+    return emailId;
+  }
 
-	public void setPresentAddress(String presentAddress) {
-		this.presentAddress = presentAddress;
-	}
-	
-	
-	
-	
+  public void setEmailId(String emailId) {
+    this.emailId = emailId;
+  }
 
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  public String getBranch() {
+    return branch;
+  }
+
+  public void setBranch(String branch) {
+    this.branch = branch;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public String getPermantAddress() {
+    return permantAddress;
+  }
+
+  public void setPermantAddress(String permantAddress) {
+    this.permantAddress = permantAddress;
+  }
+
+  public String getPresentAddress() {
+    return presentAddress;
+  }
+
+  public void setPresentAddress(String presentAddress) {
+    this.presentAddress = presentAddress;
+  }
 }

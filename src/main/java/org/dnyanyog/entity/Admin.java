@@ -1,66 +1,54 @@
 package org.dnyanyog.entity;
 
-import org.springframework.stereotype.Component;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.springframework.stereotype.Component;
 
 @Entity
 @Component
 @Table
 public class Admin {
 
-	@GeneratedValue
-	@Id
-	@Column
-	private long serialNo;
-	
-	@Column
-	private String adminId;
+  @GeneratedValue @Id @Column private long serialNo;
 
-	@Column
-	private String adminEmail;
+  @Column private String adminId;
 
-	@Column
-	private String password;
+  @Column private String adminEmail;
 
-	public long getSerialNo() {
-		return serialNo;
-	}
+  @Column private String password;
 
-	public void setSerialNo(long serialNo) {
-		this.serialNo = serialNo;
-	}
+  public long getSerialNo() {
+    return serialNo;
+  }
 
-	public String getAdminId() {
-		return adminId;
-	}
+  public void setSerialNo(long serialNo) {
+    this.serialNo = serialNo;
+  }
 
-	public void setAdminId(String adminId) {
-		this.adminId = adminId;
-	}
+  public String getAdminId() {
+    return adminId;
+  }
 
-	public String getAdminEmail() {
-		return adminEmail;
-	}
+  public void setAdminId(String adminId) {
+    this.adminId = adminId;
+  }
 
-	public void setAdminEmail(String adminEmail) {
-		this.adminEmail = adminEmail;
-	}
+  public String getAdminEmail() {
+    return adminEmail;
+  }
 
-	public String getPassword() {
-		return password;
-	}
+  public void setAdminEmail(String adminEmail) {
+    this.adminEmail = adminEmail;
+  }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+  public String getPassword() {
+    return password;
+  }
 
-
-
-	
-
+  public void setPassword(String password) {
+    this.password = password;
+  }
 }

@@ -1,87 +1,77 @@
 package org.dnyanyog.dto.response;
 
-import org.dnyanyog.dto.request.CustomerCanGetCardNoAndPinRequest;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CustomerCanGetCardNoAndPinResponse {
-	
-	private String status;
-	
-	private String message;
-	
-	private long customerId;
-	
-	private String EmailId;
-	
-	private String cardNo;
-	
-	private String atmPin;
-	
-	private double balance;
-	
-	
-	
-	
 
-	
-	public double getBalance() {
-		return balance;
-	}
+  private String status;
 
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
+  private String message;
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  private long customerId;
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  private String EmailId;
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  private String cardNo;
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  private String atmPin;
 
-	public String getStatus() {
-		return status;
-	}
+  private double balance;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  public double getBalance() {
+    return balance;
+  }
 
-	public String getMessage() {
-		return message;
-	}
+  public void setBalance(double balance) {
+    this.balance = balance;
+  }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+  public String getAtmPin() {
+    return atmPin;
+  }
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public String getEmailId() {
-		return EmailId;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public void setEmailId(String emailId) {
-		EmailId = emailId;
-	}
-	
-	
+  public String getStatus() {
+    return status;
+  }
 
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
+
+  public long getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
+
+  public String getEmailId() {
+    return EmailId;
+  }
+
+  public void setEmailId(String emailId) {
+    EmailId = emailId;
+  }
 }

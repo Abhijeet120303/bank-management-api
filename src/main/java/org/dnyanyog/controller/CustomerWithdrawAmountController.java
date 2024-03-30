@@ -10,12 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CustomerWithdrawAmountController {
-	
-	@Autowired
-	CustomerWithdrawAmountService customerWithdrawAmountService;
-	
-	@PostMapping(path = "/api/v1/customer/withdraw/balance", consumes = { "application/json", "application/xml" }, produces = {"application/json", "application/xml" })
-	public CustomerWithdrawAmountResponse depositAmount( @RequestBody CustomerWithdrawAmountRequest request) {
-		return customerWithdrawAmountService.withdrawAmount(request);
-	}
+
+  @Autowired CustomerWithdrawAmountService customerWithdrawAmountService;
+
+  @PostMapping(
+      path = "/api/v1/customer/withdraw/balance",
+      consumes = {"application/json", "application/xml"},
+      produces = {"application/json", "application/xml"})
+  public CustomerWithdrawAmountResponse depositAmount(
+      @RequestBody CustomerWithdrawAmountRequest request) {
+    return customerWithdrawAmountService.withdrawAmount(request);
+  }
 }

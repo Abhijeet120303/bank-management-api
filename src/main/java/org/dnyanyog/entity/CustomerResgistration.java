@@ -1,168 +1,150 @@
 package org.dnyanyog.entity;
 
-import java.time.LocalDate;
-
-
-import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+import java.time.LocalDate;
+import org.springframework.stereotype.Component;
 
 @Entity
 @Component
 @Table
 public class CustomerResgistration {
-	
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Id
-	@Column
-	private long customerId;
-	
-	@Column
-	private String firstName;
-	
-	@Column
-	private String lastName;
-	
-	@Column
-	private LocalDate dateOfBirth;
-	
-	@Column
-	private String  mobileNo;
-	
-	@Column
-	private String emailId;
-	
-	@Column
-	private String gender;
-	
-	@Column
-	private String branch;
-	
-	@Column
-	private String password;
-	
-	@Column
-	private String permanentAddress;
-	
-	@Column
-	private String presentAddress;
-	
-	@Column
-	private LocalDate registerDate;
-	
-//	@Column
-//	private String city;
-//
-//	public String getCity() {
-//		return city;
-//	}
-//
-//	public void setCity(String city) {
-//		this.city = city;
-//	}
 
-	public LocalDate getRegisterDate() {
-		return registerDate;
-	}
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  @Column
+  private long customerId;
 
-	public void setRegisterDate(LocalDate registerDate) {
-		this.registerDate = registerDate;
-	}
+  @Column private String firstName;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  @Column private String lastName;
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  @Column private LocalDate dateOfBirth;
 
-	public String getFirstName() {
-		return firstName;
-	}
+  @Column private String mobileNo;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+  @Column private String emailId;
 
-	public String getLastName() {
-		return lastName;
-	}
+  @Column private String gender;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+  @Column private String branch;
 
-	public LocalDate getDateOfBirth() {
-		return dateOfBirth;
-	}
+  @Column private String password;
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+  @Column private String permanentAddress;
 
-	public String getMobileNo() {
-		return mobileNo;
-	}
+  @Column private String presentAddress;
 
-	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
-	}
+  @Column private LocalDate registerDate;
 
-	public String getEmailId() {
-		return emailId;
-	}
+  //	@Column
+  //	private String city;
+  //
+  //	public String getCity() {
+  //		return city;
+  //	}
+  //
+  //	public void setCity(String city) {
+  //		this.city = city;
+  //	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
+  public LocalDate getRegisterDate() {
+    return registerDate;
+  }
 
-	public String getGender() {
-		return gender;
-	}
+  public void setRegisterDate(LocalDate registerDate) {
+    this.registerDate = registerDate;
+  }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public String getBranch() {
-		return branch;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public void setBranch(String branch) {
-		this.branch = branch;
-	}
+  public String getFirstName() {
+    return firstName;
+  }
 
-	public String getPassword() {
-		return password;
-	}
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+  public String getLastName() {
+    return lastName;
+  }
 
-	public String getPermanentAddress() {
-		return permanentAddress;
-	}
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
 
-	public void setPermanentAddress(String permanentAddress) {
-		this.permanentAddress = permanentAddress;
-	}
+  public LocalDate getDateOfBirth() {
+    return dateOfBirth;
+  }
 
-	public String getPresentAddress() {
-		return presentAddress;
-	}
+  public void setDateOfBirth(LocalDate dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
 
-	public void setPresentAddress(String presentAddress) {
-		this.presentAddress = presentAddress;
-	}
+  public String getMobileNo() {
+    return mobileNo;
+  }
 
-	
+  public void setMobileNo(String mobileNo) {
+    this.mobileNo = mobileNo;
+  }
 
+  public String getEmailId() {
+    return emailId;
+  }
+
+  public void setEmailId(String emailId) {
+    this.emailId = emailId;
+  }
+
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  public String getBranch() {
+    return branch;
+  }
+
+  public void setBranch(String branch) {
+    this.branch = branch;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public String getPermanentAddress() {
+    return permanentAddress;
+  }
+
+  public void setPermanentAddress(String permanentAddress) {
+    this.permanentAddress = permanentAddress;
+  }
+
+  public String getPresentAddress() {
+    return presentAddress;
+  }
+
+  public void setPresentAddress(String presentAddress) {
+    this.presentAddress = presentAddress;
+  }
 }

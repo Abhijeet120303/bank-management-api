@@ -13,18 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AdminServiceController {
 
-	@Autowired
-	AdminService authentication;
+  @Autowired AdminService authentication;
 
-	@PostMapping(path = "/api/admin/login", consumes = { "application/json", "application/xml" }, produces = {
-			"application/json", "application/xml"})
-	public AdminLoginResponse loginAdmin(@RequestBody AdminLoginRequest adminLoginRequest) {
-		return authentication.loginAdmin(adminLoginRequest);
-	}
-	@PostMapping(path = "/api/admin/register", consumes = { "application/json", "application/xml" }, produces = {
-			"application/json", "application/xml" })
-	public AdminResgisterResponse resgisterService(@RequestBody AdminResgisterRequest adminRequest) {
-		return authentication.registerAdmin(adminRequest);
-	}
-	
+  @PostMapping(
+      path = "/api/admin/login",
+      consumes = {"application/json", "application/xml"},
+      produces = {"application/json", "application/xml"})
+  public AdminLoginResponse loginAdmin(@RequestBody AdminLoginRequest adminLoginRequest) {
+    return authentication.loginAdmin(adminLoginRequest);
+  }
+
+  @PostMapping(
+      path = "/api/admin/register",
+      consumes = {"application/json", "application/xml"},
+      produces = {"application/json", "application/xml"})
+  public AdminResgisterResponse resgisterService(@RequestBody AdminResgisterRequest adminRequest) {
+    return authentication.registerAdmin(adminRequest);
+  }
 }

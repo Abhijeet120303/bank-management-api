@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Component
 @Repository
-public interface BranchServiceRepository extends JpaRepository<Branch,String>{
-
-}
+public interface BranchServiceRepository extends JpaRepository<Branch, String> {}

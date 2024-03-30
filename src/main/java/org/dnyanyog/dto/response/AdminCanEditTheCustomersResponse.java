@@ -1,34 +1,27 @@
 package org.dnyanyog.dto.response;
 
-import java.time.LocalDate;
-
 import org.springframework.stereotype.Component;
 
 @Component
 public class AdminCanEditTheCustomersResponse {
-	
-	private String status;
 
-	private String message;
+  private String status;
 
+  private String message;
 
-	public String getStatus() {
-		return status;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	public String getMessage() {
-		return message;
-	}
+  public String getMessage() {
+    return message;
+  }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-
-	
-
+  public void setMessage(String message) {
+    this.message = message;
+  }
 }

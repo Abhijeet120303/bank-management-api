@@ -9,14 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AdminCanSearchTheCustomersController {
-	
-	@Autowired
-	AdminCanSearchTheCustomersService adminCanSearchTheCustomersService;
-	
-	@GetMapping(path = "/api/v1/admin/search/customer/{customerId}")
-	public AdminCanSearchTheCustomersResponse getSingleCustomer(@PathVariable Long customerId) {
-		return adminCanSearchTheCustomersService.getSingleCustomer(customerId);
 
-	}
+  @Autowired AdminCanSearchTheCustomersService adminCanSearchTheCustomersService;
 
+  @GetMapping(path = "/api/v1/admin/search/customer/{customerId}")
+  public AdminCanSearchTheCustomersResponse getSingleCustomer(@PathVariable Long customerId) {
+    return adminCanSearchTheCustomersService.getSingleCustomer(customerId);
+  }
 }

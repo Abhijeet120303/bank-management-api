@@ -2,7 +2,6 @@ package org.dnyanyog.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
 import org.dnyanyog.dto.request.CustomerWithdrawAmountRequest;
 import org.dnyanyog.dto.response.CustomerWithdrawAmountResponse;
 import org.dnyanyog.entity.Account;
@@ -15,54 +14,54 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomerWithdrawAmountService {
 
-    @Autowired
-    CustomerWithdrawAmountRepository customerDepositWithdrawRepository;
+  @Autowired CustomerWithdrawAmountRepository customerDepositWithdrawRepository;
 
-    @Autowired
-    TransactionsRepository transactionsRepository;
+  @Autowired TransactionsRepository transactionsRepository;
 
-    public CustomerWithdrawAmountResponse withdrawAmount(CustomerWithdrawAmountRequest request) {
+  public CustomerWithdrawAmountResponse withdrawAmount(CustomerWithdrawAmountRequest request) {
 
-        CustomerWithdrawAmountResponse response = new CustomerWithdrawAmountResponse();
+    CustomerWithdrawAmountResponse response = new CustomerWithdrawAmountResponse();
 
-        List<Account> accounts = customerDepositWithdrawRepository.findByCardNoAndAtmPin(request.getCardNo(), request.getAtmPin());
+    List<Account> accounts =
+        customerDepositWithdrawRepository.findByCardNoAndAtmPin(
+            request.getCardNo(), request.getAtmPin());
 
-        if (accounts.isEmpty()) {
-            response.setStatus("Fail");
-            response.setResponse("Pin Incorrect");
-        } else {
-            Account acc = accounts.get(0);
+    if (accounts.isEmpty()) {
+      response.setStatus("Fail");
+      response.setResponse("Pin Incorrect");
+    } else {
+      Account acc = accounts.get(0);
 
-            if (acc.getAccountStatus().equals("Open")) {
-                double currentBalance = acc.getBalance();  
+      if (acc.getAccountStatus().equals("Open")) {
+        double currentBalance = acc.getBalance();
 
-                if (currentBalance > request.getBalance()) {
-                    acc.setBalance(currentBalance - request.getBalance());
+        if (currentBalance > request.getBalance()) {
+          acc.setBalance(currentBalance - request.getBalance());
 
-                    acc = customerDepositWithdrawRepository.save(acc);
+          acc = customerDepositWithdrawRepository.save(acc);
 
-                    Transactions transactions = new Transactions();
+          Transactions transactions = new Transactions();
 
-                    transactions.setCustomerId(acc.getCustomerId());
-                    transactions.setBalance(request.getBalance());
-                    transactions.setCardNo(acc.getCardNo());
-                    transactions.setTransactionDate(LocalDateTime.now());
-                    transactions.setTransactionType("Withdraw Amount");
+          transactions.setCustomerId(acc.getCustomerId());
+          transactions.setBalance(request.getBalance());
+          transactions.setCardNo(acc.getCardNo());
+          transactions.setTransactionDate(LocalDateTime.now());
+          transactions.setTransactionType("Withdraw Amount");
 
-                    transactions = transactionsRepository.save(transactions);
+          transactions = transactionsRepository.save(transactions);
 
-                    response.setStatus("Success");
-                    response.setResponse("Amount Withdrawn Successfully");
-                    return response;
-                }
-                response.setStatus("Fail");
-                response.setResponse("Insufficient Balance");
-            } else {
-                response.setStatus("Fail");
-                response.setResponse("Your Account Has Lock. Please Contact The Admin");
-            }
+          response.setStatus("Success");
+          response.setResponse("Amount Withdrawn Successfully");
+          return response;
         }
-
-        return response;
+        response.setStatus("Fail");
+        response.setResponse("Insufficient Balance");
+      } else {
+        response.setStatus("Fail");
+        response.setResponse("Your Account Has Lock. Please Contact The Admin");
+      }
     }
+
+    return response;
+  }
 }

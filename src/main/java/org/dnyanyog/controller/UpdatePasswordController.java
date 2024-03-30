@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UpdatePasswordController {
-	
-	@Autowired
-	UpdateAdminPassword service;
-	
-	@PostMapping(path = "/api/admin/update/password", consumes = { "application/json", "application/xml" }, produces = {
-			"application/json", "application/xml" })
-	public AdminResgisterResponse updatePassword(@RequestBody AdminResgisterRequest adminRequest) {
-		return service.updatePassword(adminRequest);
-	}
 
+  @Autowired UpdateAdminPassword service;
+
+  @PostMapping(
+      path = "/api/admin/update/password",
+      consumes = {"application/json", "application/xml"},
+      produces = {"application/json", "application/xml"})
+  public AdminResgisterResponse updatePassword(@RequestBody AdminResgisterRequest adminRequest) {
+    return service.updatePassword(adminRequest);
+  }
 }

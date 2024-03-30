@@ -1,84 +1,78 @@
 package org.dnyanyog.dto.response;
 
 import java.time.LocalDateTime;
-
 import org.springframework.stereotype.Component;
 
 @Component
 public class CustomerCanGetTransactionsResponse {
-	
-	private String status;
-	
-	private String message;
-	
-	private long customerId;
-	
-	private long transactionId;	
 
-	private int balance;
+  private String status;
 
-	private String transactionType;
+  private String message;
 
-	private LocalDateTime transactionDate;
+  private long customerId;
 
-	public String getStatus() {
-		return status;
-	}
+  private long transactionId;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private int balance;
 
-	public String getMessage() {
-		return message;
-	}
+  private String transactionType;
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+  private LocalDateTime transactionDate;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	public long getTransactionId() {
-		return transactionId;
-	}
+  public String getMessage() {
+    return message;
+  }
 
-	public void setTransactionId(long transactionId) {
-		this.transactionId = transactionId;
-	}
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-	public int getBalance() {
-		return balance;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public void setBalance(int balance) {
-		this.balance = balance;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public String getTransactionType() {
-		return transactionType;
-	}
+  public long getTransactionId() {
+    return transactionId;
+  }
 
-	public void setTransactionType(String transactionType) {
-		this.transactionType = transactionType;
-	}
+  public void setTransactionId(long transactionId) {
+    this.transactionId = transactionId;
+  }
 
-	public LocalDateTime getTransactionDate() {
-		return transactionDate;
-	}
+  public int getBalance() {
+    return balance;
+  }
 
-	public void setTransactionDate(LocalDateTime transactionDate) {
-		this.transactionDate = transactionDate;
-	}
-	
-	
-	
-	
+  public void setBalance(int balance) {
+    this.balance = balance;
+  }
 
+  public String getTransactionType() {
+    return transactionType;
+  }
+
+  public void setTransactionType(String transactionType) {
+    this.transactionType = transactionType;
+  }
+
+  public LocalDateTime getTransactionDate() {
+    return transactionDate;
+  }
+
+  public void setTransactionDate(LocalDateTime transactionDate) {
+    this.transactionDate = transactionDate;
+  }
 }

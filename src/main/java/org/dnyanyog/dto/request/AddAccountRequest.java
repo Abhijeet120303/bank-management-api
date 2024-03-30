@@ -4,87 +4,84 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AddAccountRequest {
-	
-	private long customerId;
-	
-	private String cardNo;
-	
-	private String accountType;
-	
-	private double balance;
-	
-	private String atmPin;
-	
-	private String accountStatus;
-	
-	private long serialNo;
-	
-	private String emailId;
 
-	public String getEmailId() {
-		return emailId;
-	}
+  private long customerId;
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
+  private String cardNo;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+  private String accountType;
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+  private double balance;
 
-	public String getCardNo() {
-		return cardNo;
-	}
+  private String atmPin;
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
+  private String accountStatus;
 
-	public String getAccountType() {
-		return accountType;
-	}
+  private long serialNo;
 
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
-	}
+  private String emailId;
 
-	public double getBalance() {
-		return balance;
-	}
+  public String getEmailId() {
+    return emailId;
+  }
 
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
+  public void setEmailId(String emailId) {
+    this.emailId = emailId;
+  }
 
-	public String getAtmPin() {
-		return atmPin;
-	}
+  public long getCustomerId() {
+    return customerId;
+  }
 
-	public void setAtmPin(String atmPin) {
-		this.atmPin = atmPin;
-	}
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
+  }
 
-	public String getAccountStatus() {
-		return accountStatus;
-	}
+  public String getCardNo() {
+    return cardNo;
+  }
 
-	public void setAccountStatus(String accountStatus) {
-		this.accountStatus = accountStatus;
-	}
+  public void setCardNo(String cardNo) {
+    this.cardNo = cardNo;
+  }
 
-	public long getSerialNo() {
-		return serialNo;
-	}
+  public String getAccountType() {
+    return accountType;
+  }
 
-	public void setSerialNo(long serialNo) {
-		this.serialNo = serialNo;
-	}
+  public void setAccountType(String accountType) {
+    this.accountType = accountType;
+  }
 
-	
+  public double getBalance() {
+    return balance;
+  }
 
+  public void setBalance(double balance) {
+    this.balance = balance;
+  }
+
+  public String getAtmPin() {
+    return atmPin;
+  }
+
+  public void setAtmPin(String atmPin) {
+    this.atmPin = atmPin;
+  }
+
+  public String getAccountStatus() {
+    return accountStatus;
+  }
+
+  public void setAccountStatus(String accountStatus) {
+    this.accountStatus = accountStatus;
+  }
+
+  public long getSerialNo() {
+    return serialNo;
+  }
+
+  public void setSerialNo(long serialNo) {
+    this.serialNo = serialNo;
+  }
 }
